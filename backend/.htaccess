@@ -1,0 +1,10 @@
+# Ativar o uso do .htaccess
+RewriteEngine On
+
+# Configurar a página inicial
+DirectoryIndex index.php
+
+# Redirecionar todas as requisições para o arquivo index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

@@ -1,0 +1,30 @@
+# Ignorar diretórios e arquivos gerados
+/vendor
+/node_modules
+/public/assets
+
+# Ignorar arquivos de configuração
+.env
+
+# Ignorar arquivos de log
+/log/*.log
+
+# Ignorar arquivos de cache
+/cache/*
+
+# Ignorar arquivos de backup
+*.bak
+
+# Ignorar arquivos de sessão
+/session/*
+
+# Ignorar arquivos de configuração de IDEs
+.idea/
+.vscode/
+
+# Ignorar arquivos de dependências de desenvolvimento
+composer.lock
+package-lock.json
+yarn.lock
+
+/config/*
