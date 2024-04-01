@@ -1,0 +1,25 @@
+
+<!--{*============ BOOTSTRAP JS ===========*}-->
+<script>
+    document.write('<script src="' + baseUrl + '/assets/bootstrap-5.3.0/js/bootstrap.min.js"><\/script>');
+    document.write('<script src="' + baseUrl + '/assets/bootstrap-5.3.0/js/bootstrap.bundle.min.js"><\/script>');
+
+    <!--{*============ MAIN ===========*}-->
+    document.write('<script src="' + baseUrl + '/main.js" type="module"><\/script>');
+</script>
+
+<!--{*============ CUSTOM JS ===========*}-->
+
+<!--{*============ SWEET ALERT ===========*}-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" charset="ISO-8859-1"></script>
+
+<script>
+    // Inicializa os tooltips do Bootstrap 5
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+
+</body>
+</html>

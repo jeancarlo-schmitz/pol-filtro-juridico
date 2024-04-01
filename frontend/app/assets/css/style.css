@@ -1,0 +1,24 @@
+:root{
+    --body-bg: #e5e5e5;
+    --nav-bg: #fafafa;
+    --nav-text-color: #1a63ab;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body#pol-filtro-juridico{
+    font-family: system-ui;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 1.25rem;
+    background: var(--body-bg);
+    color: var(--nav-text-color);
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 4rem;
+}
+
+

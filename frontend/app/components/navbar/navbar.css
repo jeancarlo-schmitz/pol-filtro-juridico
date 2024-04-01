@@ -1,0 +1,86 @@
+nav{
+    position: sticky;
+    top: 0;
+    max-height: 100svh;
+    background-color: var(--nav-bg);
+}
+
+.nav-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    gap: 2rem;
+    padding-block: 2rem;
+}
+
+.nav-list li{
+    /*padding: 1rem 2rem;*/
+    margin-left: 2rem;
+    border-radius: 1vw 0 0 1vw;
+}
+
+.nav-list li.active{
+    view-transition-name: activeNavTab;
+    background: var(--body-bg);
+    position: relative;
+}
+
+.nav-list li:nth-child(1) a{
+    view-transition-name: navLink-1;
+}
+
+.nav-list li:nth-child(2) a{
+    view-transition-name: navLink-2;
+}
+
+.nav-list li:nth-child(3) a{
+    view-transition-name: navLink-3;
+}
+
+::view-transition-group(activeNavTab){
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+
+}
+
+.nav-list li.active::before,
+.nav-list li.active::after{
+    --border-radius: 3rem;
+    content: '';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right:0;
+    background:  var(--nav-bg);
+}
+
+.nav-list li.active::before{
+    top: calc( var(--border-radius) * -1);
+    border-radius: 0 0 100vw 0;
+    box-shadow: 10px 10px 0 10px var(--body-bg);
+}
+
+.nav-list li.active::after{
+    bottom: calc( var(--border-radius) * -1);
+    border-radius: 0 100vw 0 0;
+    box-shadow: 10px -10px 0 10px var(--body-bg);
+}
+
+.nav-list a{
+    color: var(--nav-text-color);
+    display: block;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    padding: 1rem 2rem;
+}
+
+.nav-list a:hover{
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: 0 1px 4px #00000040;
+    margin-right: 0;
+    border-radius: 25px;
+}
